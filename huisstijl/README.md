@@ -14,14 +14,28 @@ omslag, de naam, de ligging, de richting, primair logo, logovarianten, kleur,
 typografie, grafisch element, toon en kernboodschap, en dan de toepassingen
 (bouwhek, gevelbanner, projectpagina, social, drukwerk), overzicht en verantwoording.
 
+## Logo-uitwerking
+
+`Hiero - logo-uitwerking.pdf` werkt het logo-idee uit: een dakcontour boven het woord en de
+O als zon die in het water zakt. Elf pagina's met constructie, vier varianten van de O, drie
+boogvormen, drie letterkeuzes, vier paletten, varianten en maten, fout gebruik en toepassing.
+
+De losse bestanden staan in `logo/`. In alle SVG's zijn de letters omgezet naar contouren,
+dus wie het logo plaatst heeft geen letterlicentie nodig.
+
 ## Opnieuw genereren
 
 ```
-python3 build.py
+python3 build.py       # de drie huisstijlrichtingen
+python3 logosheet.py   # de logo-uitwerking en de SVG-bestanden in logo/
 ```
 
-Vereist `pymupdf` niet — alleen Chromium (pad staat in `build.py`) en de letters in
-`fonts/`. Het script schrijft eerst een HTML per richting en print die naar PDF.
+Vereist Chromium (pad staat in de scripts), de letters in `fonts/` en `fonttools` voor de
+letteromtrekken. De scripts schrijven eerst HTML en printen die naar PDF.
+
+`logo.py` bevat de meetkunde van het logo: één maat, de kapitaalhoogte, bepaalt alles.
+Ringdikte, horizon, zonsradius, boogrijzing en overstek zijn daarvan afgeleid, dus een
+wijziging in `PALETTEN` of `RING` werkt overal door.
 
 ## Uitgangspunten
 
