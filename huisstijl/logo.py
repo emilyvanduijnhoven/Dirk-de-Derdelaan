@@ -20,37 +20,37 @@ RING = 0.60                      # ringdikte van de O, als deel van de lettersta
 # ---------------------------------------------------------------- paletten
 
 PALETTEN = {
-    "avondlicht": {
-        "naam": "Avondlicht",
-        "ink": "#1C2C46", "sun": "#F0A93B", "water": "#8FB0CB",
-        "bg": "#F4F1EA", "inknaam": "Nachtblauw", "sunnaam": "Avondzon",
-        "waternaam": "Waterblauw", "bgnaam": "Kalk",
-        "waarom": "De zon zakt hier over het water van het Scheur. Diep blauw leest als avond en "
-                  "als hoogte, en het is geen luxecode.",
+    "schemer": {
+        "naam": "Schemer",
+        "ink": "#16302F", "sun": "#D9A273", "water": "#4F6F6B",
+        "bg": "#EFEAE0", "inknaam": "Diep petrol", "sunnaam": "Zandzon",
+        "waternaam": "Gedempt groenblauw", "bgnaam": "Bot",
+        "waarom": "Water en letters komen uit dezelfde familie, dus er is maar één warme noot. "
+                  "Geen complementair conflict, en de zon is zand in plaats van geel.",
+    },
+    "tonaal": {
+        "naam": "Tonaal",
+        "ink": "#1F2A33", "sun": "#8093A0", "water": "#B6C2C8",
+        "bg": "#ECEAE5", "inknaam": "Inkt", "sunnaam": "Middentoon",
+        "waternaam": "Lichte toon", "bgnaam": "Kalk",
+        "waarom": "Eén kleurfamilie in drie sterktes, geen tweede kleur. De zonsondergang wordt "
+                  "licht in plaats van kleur. Het meest terughoudend en het moeilijkst fout te doen.",
+    },
+    "avondrood": {
+        "naam": "Avondrood",
+        "ink": "#2A2325", "sun": "#A84A3C", "water": "#7E8A8B",
+        "bg": "#EDE6DB", "inknaam": "Bijna zwart", "sunnaam": "Avondrood",
+        "waternaam": "Grijsgroen", "bgnaam": "Steen",
+        "waarom": "Een zon die de horizon raakt is rood, niet geel. Dat is meteen minder "
+                  "voorspelbaar, en het grijsgroene water houdt het koel zonder blauw te worden.",
     },
     "klei": {
-        "naam": "Klei",
-        "ink": "#5E2C26", "sun": "#E9A44A", "water": "#A3B8C4",
-        "bg": "#F3EDE4", "inknaam": "Oxiderood", "sunnaam": "Warme zon",
-        "waternaam": "Zinkblauw", "bgnaam": "Room",
-        "waarom": "Warmer en aardser. Sluit aan op baksteen en op het maaiveld, maar de zon moet "
-                  "dan koeler om zich te onderscheiden van de ink.",
-    },
-    "grafiet": {
-        "naam": "Grafiet",
-        "ink": "#292D33", "sun": "#F2B63C", "water": "#96BBD4",
-        "bg": "#F2F2EF", "inknaam": "Grafiet", "sunnaam": "Zon",
-        "waternaam": "Luchtblauw", "bgnaam": "Wit",
-        "waarom": "Neutraal en het meest stedelijk. Laat de zon het hardst werken, maar geeft het "
-                  "merk zelf de minste eigen kleur.",
-    },
-    "polder": {
-        "naam": "Polder",
-        "ink": "#20342B", "sun": "#EFB13F", "water": "#9BBBC9",
-        "bg": "#F1F0E6", "inknaam": "Polderdonker", "sunnaam": "Zon",
-        "waternaam": "Slootblauw", "bgnaam": "Kalk",
-        "waarom": "Dichtst bij je eigen schets, maar donkerder en koeler groen. Verwijst naar de "
-                  "Broekpolder in plaats van naar een weiland.",
+        "naam": "Inkt en klei",
+        "ink": "#22201D", "sun": "#B06A45", "water": "#D3A98F",
+        "bg": "#EDE8DF", "inknaam": "Roetzwart", "sunnaam": "Klei",
+        "waternaam": "Lichte klei", "bgnaam": "Room",
+        "waarom": "Tweekleurig: het water is een lichtere tint van de zon. Twee tinten in het hele "
+                  "merk, dus het kan nauwelijks rommelig worden. Warm en aards.",
     },
 }
 

@@ -11,7 +11,7 @@ LOGODIR = os.path.join(HERE, "logo")
 os.makedirs(LOGODIR, exist_ok=True)
 
 L = G.Letters("Outfit-800.ttf")
-PAL = G.PALETTEN["avondlicht"]
+PAL = G.PALETTEN["schemer"]
 SCHETS = {"ink": "#2E6B4F", "sun": "#F2E27A", "water": "#A8C4E5", "bg": "#FFFFFF"}
 
 def face(fam, w, st, fn):
@@ -346,9 +346,9 @@ def p6():
 
 def p7():
     kaarten = []
-    for key in ("avondlicht", "klei", "grafiet", "polder"):
+    for key in ("schemer", "tonaal", "avondrood", "klei"):
         p = G.PALETTEN[key]
-        aanbev = key == "avondlicht"
+        aanbev = key == "schemer"
         rand = "2px solid %s" % PAL["ink"] if aanbev else "1px solid rgba(0,0,0,.12)"
         stalen = "".join(
             '<div style="flex:1"><div style="height:9mm;background:%s;border-radius:.8mm;'
@@ -363,21 +363,21 @@ def p7():
                   'AANBEVOLEN</span>' % PAL["ink"]) if aanbev else ""
         b, vb = G.lockup(L, p, uid="p" + key)
         kaarten.append(
-            '<div style="flex:1;background:%s;border:%s;border-radius:1.6mm;padding:5.5mm;'
-            'display:flex;flex-direction:column">'
+            '<div style="flex:1;background:%s;border:%s;border-radius:1.6mm;padding:5mm;'
+            'display:flex;flex-direction:column;overflow:hidden">'
             '<div style="display:flex;align-items:center"><div class="lbl">%s</div>%s</div>'
-            '<div style="margin:6mm 0 5mm;flex:1;display:flex;align-items:center">%s</div>'
+            '<div style="margin:5mm 0 4mm;flex:1;display:flex;align-items:center">%s</div>'
             '<div style="display:flex;gap:2mm">%s</div>'
-            '<div class="tiny" style="margin-top:3mm">%s</div></div>'
-            % (p["bg"], rand, p["naam"], merkje, G.inline(b, vb, 74), stalen, p["waarom"]))
+            '<div class="tiny" style="margin-top:2.5mm">%s</div></div>'
+            % (p["bg"], rand, p["naam"], merkje, G.inline(b, vb, 66), stalen, p["waarom"]))
     inner = '''
 <div class="pad">
-  <div style="padding-top:11mm"><h2>Kleur</h2>
+  <div style="padding-top:9mm"><h2>Kleur</h2>
     <p class="small" style="margin-top:3mm;max-width:150mm">Drie kleuren en een basis: de ink voor
       letters en boog, de zon, en het water. Meer heeft het logo niet nodig, en de zon is de enige
       die warm mag zijn.</p></div>
-  <div style="display:flex;gap:4mm;margin-top:7mm;height:62mm">%s%s</div>
-  <div style="display:flex;gap:4mm;margin-top:4mm;height:62mm">%s%s</div>
+  <div style="display:flex;gap:4mm;margin-top:6mm;height:68mm">%s%s</div>
+  <div style="display:flex;gap:4mm;margin-top:4mm;height:68mm">%s%s</div>
 </div>''' % tuple(kaarten)
     return page(inner, num="07 / 11", label="Kleur")
 
@@ -546,7 +546,7 @@ def p10():
 def p11():
     rows = "".join('<tr><td style="width:56mm;font-weight:600">%s</td><td>%s</td></tr>' % (a, b)
                    for a, b in [
-        ("hiero-logo.svg", "Primair logo, palet Avondlicht, op lichte ondergrond"),
+        ("hiero-logo.svg", "Primair logo, palet Schemer, op lichte ondergrond"),
         ("hiero-logo-ink.svg", "Primair logo op de ink-kleur, voor donkere vlakken"),
         ("hiero-logo-compact.svg", "Zonder boog, voor smalle dragers en kleine maten"),
         ("hiero-logo-klein.svg", "Zonder reflectiebalk, vanaf 12 tot 20 mm breed"),
@@ -554,7 +554,7 @@ def p11():
         ("hiero-logo-mono-wit.svg", "Eén kleur wit, voor foto en donkere ondergrond"),
         ("hiero-beeldmerk.svg", "Alleen de zon-O met boog, voor social en app-icoon"),
         ("hiero-beeldmerk-zonder-boog.svg", "Alleen de zon-O, voor favicon onder 12 mm"),
-        ("hiero-logo-{palet}.svg", "Dezelfde lockup in Klei, Grafiet en Polder"),
+        ("hiero-logo-{palet}.svg", "Dezelfde lockup in Tonaal, Avondrood en Inkt en klei"),
     ])
     inner = '''
 <div class="pad">
@@ -616,7 +616,7 @@ def export_svg():
     b, vb = G.lockup(L, PAL, mono="#FFFFFF", uid="f");        w("hiero-logo-mono-wit.svg", b, vb)
     b, vb = G.merk(L, PAL, uid="g");                          w("hiero-beeldmerk.svg", b, vb)
     b, vb = G.merk(L, PAL, uid="g2", boog=False);             w("hiero-beeldmerk-zonder-boog.svg", b, vb)
-    for k in ("klei", "grafiet", "polder"):
+    for k in ("tonaal", "avondrood", "klei"):
         b, vb = G.lockup(L, G.PALETTEN[k], uid="h" + k);      w("hiero-logo-%s.svg" % k, b, vb)
     return uit
 
